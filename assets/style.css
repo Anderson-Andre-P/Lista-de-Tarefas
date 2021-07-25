@@ -36,8 +36,8 @@ body.dark  li {
 
 .toggle-theme {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 0px;
+    left: 6px;
     z-index: 100;
 }
 
@@ -50,7 +50,7 @@ body.dark  li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transform: scale(1.5);
+    transform: scale(1);
     position: relative;
 }
 
