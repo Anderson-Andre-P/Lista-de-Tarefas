@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    color: rgb(49, 49, 49);
+    margin: 0;
+    transition: background 0.2s linear;
+}
+
+/* DARK THEME */
+body.dark {
+    background-color: #121212;
+}
+
+body.dark .container {
+    background-color: #1F1F1F;
+
+}
+
+body.dark  h1,
+body.dark  li {
+    color: #fff;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.toggle-theme {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.label {
+    height: 26px;
+    width: 50px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: scale(1.5);
+    position: relative;
+}
+
+.ball {
+    background-color: #fff;
+    height: 22px;
+    width: 22px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+    position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.uil-moon {
+    color: #4158B3;
+}
+
+.uil-sun {
+    color: #4158B3;
+}
+
+p, h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: rgb(211, 211, 211);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+label {
+    margin: 10px 0;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: 500;
+    color: #212121;
+
+    margin-right: 20px;
+}
+
+input:focus {
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 2px #4158B3;
+}
+
+.btnAdd {
+    padding: 12px;
+    font-size: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #4158B3;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.btnAdd:hover, button.apagar:hover {
+    background-color: #14225a;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 368px;  
+}
+
+ul.tarefas li button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4158B3;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    min-width: 70px;
+    max-width: 70px;
+    display: block;
+
+    word-wrap: normal;
+    hyphens: none;
+
+    margin-left: 20px;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 570px) {
+    .container {
+        max-width: 400px;
+    }
+
+    .btnAdd {
+        margin-top: 9px;
+    }
+
+    ul {
+        width: 350px;
+    }
+
+    button.apagar {
+        min-width: 65px;
+        max-width: 65px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        max-width: 300px;
+    }
+
+    ul {
+        width: 250px;
+    }
+
+    .btnAdd {
+        margin-top: 9px;
+    }
+
+    ul.tarefas li button {
+        min-width: 65px;
+        max-width: 65px;
+        margin-left: 10px;
+    }
+
+    li{
+        margin: 3px 0;
+    }
+}
