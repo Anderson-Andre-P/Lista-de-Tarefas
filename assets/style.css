@@ -179,6 +179,10 @@ li {
 }
 
 @media (max-width: 570px) {
+    input {
+        margin-right: 10px;
+    }
+
     .container {
         max-width: 400px;
     }
@@ -198,6 +202,10 @@ li {
 }
 
 @media (max-width: 420px) {
+    input {
+        margin-right: 0px;
+    }
+
     .container {
         max-width: 300px;
     }
